@@ -1,0 +1,47 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import configureStore from './store/store';
+
+import Root from './components/root';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const preloadedState = localStorage.state ?
+    JSON.parse(localStorage.state) : {};
+  let store = configureStore(preloadedState);
+  // Phase I
+  // store.dispatch = addLoggingToDispatch(store);
+  // Phase II
+  // store = applyMiddlewares(store, addLoggingToDispatch);
+
+  const root = document.getElementById('content');
+  ReactDOM.render(<Root store={store} />, root);
+});
+
+// Phase I
+// const addLoggingToDispatch = (store) => {
+//   let savedStore = store.dispatch;
+//   return (action) => {
+//     console.log(store.getState());
+//     console.log(action);
+//     savedStore(action);
+//     console.log(store.getState());
+//   }
+// }
+
+// Phase II
+// let addLoggingToDispatch = store => next => action => {
+//   console.log(store.getState());
+//   console.log(action);
+//
+//   next(action);
+//
+//   console.log(store.getState());
+// };
+//
+// let applyMiddlewares = (store, ...middlewares) => {
+//   let dispatch = store.dispatch;
+//   middlewares.forEach((middleware) => {
+//     dispatch = middleware(store)(dispatch);
+//   });
+//   return Object.assign({}, store, { dispatch });
+// };

@@ -1,0 +1,72 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.nav-splash {
+  background: #d2b38b;
+  color: #FFFFFF;
+}
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-splash > .nav-links a {
+  padding: 5px 10px;
+  color: #FFFFFF;
+}
+
+.nav-info {
+  padding: 0px 5px;
+  text-align: right;
+}
+
+.nav-info a {
+  color: #FFFFFF;
+}
+
+.bg-image-splash {
+  background-image: url("splash.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-splash {
+  z-index: 1;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.footer-splash {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-splash a {
+  padding: 20px;
+  color: #d9c09e;
+}
+
+.footer-splash a:hover {
+  color: #cba87a;
+}
+
+.logo {
+  width: 50px;
+}
+
+.note-preview {
+
+}
+
+.note-preview h3 {
+  font-weight: bold;
+}
